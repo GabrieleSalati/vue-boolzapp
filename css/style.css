@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #d3dbdb;
     height: 100vh;
@@ -13,8 +19,7 @@ body {
     height: 90vh;
 }
 
-.chat {
-    background-color: #e4dcd5;
+.chatbox {
     height: 90vh;
 }
 
@@ -31,4 +36,30 @@ p {
 .profile-icons {
     vertical-align: middle;
     line-height: 3.5rem;
+}
+
+.notifications {
+    background-color: aqua;
+}
+
+.fa-bell-slash {
+    padding-left: 1.1rem;
+    padding-top: 1.2rem;
+}
+
+.bell {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    background-color: white;
+    display: inline-block;
+}
+
+.current-chat {
+    background-color: white;
+}
+
+.messages {
+    height: 75vh;
+    background-image: url(../img/mine.jpg)
 }

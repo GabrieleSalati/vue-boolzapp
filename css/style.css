@@ -1,0 +1,19 @@
+body {
+    background-color: #d3dbdb;
+    height: 100vh;
+}
+
+.macro {
+    height: 90vh;
+    width: 1200px;
+}
+
+.contacts {
+    background-color: white;
+    height: 90vh;
+}
+
+.chat {
+    background-color: #e4dcd5;
+    height: 90vh;
+}

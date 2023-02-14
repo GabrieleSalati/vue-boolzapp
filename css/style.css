@@ -17,3 +17,18 @@ body {
     background-color: #e4dcd5;
     height: 90vh;
 }
+
+img {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+p {
+    display: inline-block;
+}
+
+.profile-icons {
+    vertical-align: middle;
+    line-height: 3.5rem;
+}

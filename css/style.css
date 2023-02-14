@@ -63,3 +63,7 @@ p {
     height: 75vh;
     background-image: url(../img/mine.jpg)
 }
+
+ul {
+    list-style: none;
+}

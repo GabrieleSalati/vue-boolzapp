@@ -87,10 +87,14 @@ ul {
     background-color: grey;
     border-radius: 5px;
     display: block;
+    padding: 0.3rem;
+    margin: 0.5rem;
 }
 
 .sent {
     background-color: green;
     border-radius: 5px;
     display: block;
+    padding: 0.3rem;
+    margin: 0.5rem;
 }

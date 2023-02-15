@@ -81,12 +81,11 @@
                         </div>
                     </div>
                     <div class="messages">
-                        <div class="d-flex align-items-center flex-column">
-                            <p class="received">ciao</p>
+                        <div v-for="contact in contacts" class="d-flex align-items-start flex-column">
+                            <p v-for="message in contact.messages" class="received">{{message}}</p>
                         </div>
-                        <div class="d-flex align-items-end flex-column">
-                            <p class="sent">ciao</p>
-                            <p class="sent">bella</p>
+                        <div v-for="contact in contacts" class="d-flex align-items-end flex-column">
+                            <p v-for="message in contact.messages" class="sent">{{message}}</p>
                         </div>
                     </div>
                     <div class="type-bar d-flex justify-content-around align-items-center">

@@ -37,30 +37,30 @@
 
         <div class="container macro">
             <div class="row">
-                <div class="col-4 contacts">
+                <div class="col-4 contacts px-0">
                     <div class="account d-flex justify-content-between">
                         <div>
                             <img src="./img/avatar_io.jpg" alt="sofia">
                             <p>Sofia</p>
                         </div>
                         <div>
-                            <i class="fa-sharp fa-regular fa-circle profile-icons"></i>
-                            <i class="fa-solid fa-message profile-icons"></i>
-                            <i class="fa-solid fa-ellipsis-vertical profile-icons"></i>
+                            <i class="fa-sharp fa-regular fa-circle icon"></i>
+                            <i class="fa-solid fa-message icon"></i>
+                            <i class="fa-solid fa-ellipsis-vertical icon"></i>
                         </div>
                     </div>
-                    <div class="notifications">
-                        <div class="bell"><i class="fa-solid fa-bell-slash"></i></div>
+                    <div class="notifications ps-1">
+                        <div class="bell py-1"><i class="fa-solid fa-bell-slash"></i></div>
                         <p>Ricevi notifiche di nuovi messaggi <br> Attiva notifiche desktop</p>
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3 p-1">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
                         <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
                             aria-label="Example text with button addon" aria-describedby="button-addon1">
                     </div>
                     <div>
-                        <ul>
+                        <ul class="ps-1">
                             <li v-for="contact in contacts">
                                 <img :src="contact.avatar" alt="avatar">
                                 <p>{{contact.name}}</p>
@@ -68,23 +68,23 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-8 chatbox">
+                <div class="col-8 chatbox px-0">
                     <div class="current-chat d-flex justify-content-between">
                         <div>
                             <img src="./img/avatar_1.jpg" alt="Michele">
                             <p>Michele</p>
                         </div>
                         <div>
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <i class="fa-solid fa-paperclip"></i>
-                            <i class="fa-solid fa-ellipsis-vertical profile-icons"></i>
+                            <i class="fa-solid fa-magnifying-glass icon"></i>
+                            <i class="fa-solid fa-paperclip icon"></i>
+                            <i class="fa-solid fa-ellipsis-vertical icon"></i>
                         </div>
                     </div>
                     <div class="messages"></div>
-                    <div class="type-bar">
-                        <i class="fa-regular fa-face-smile"></i>
-                        <input type="text">
-                        <i class="fa-solid fa-microphone"></i>
+                    <div class="type-bar d-flex justify-content-around align-items-center">
+                        <i class="fa-regular fa-face-smile icon"></i>
+                        <input type="text" class="text-bar">
+                        <i class="fa-solid fa-microphone icon"></i>
                     </div>
                 </div>
             </div>

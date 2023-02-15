@@ -73,6 +73,10 @@ ul {
     list-style: none;
 }
 
+li {
+    cursor: pointer;
+}
+
 .type-bar {
     background-color: white;
     height: 56px;

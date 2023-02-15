@@ -164,16 +164,15 @@ createApp({
                             status: 'received'
                         }
                     ],
-
-                }
+                },
             ],
             activeContact: 0,
         }
     },
 
     methods: {
-        selectContact(i) {
-            this.activeContact = i;
+        selectContact(index) {
+            this.activeContact = index;
         },
     }
 

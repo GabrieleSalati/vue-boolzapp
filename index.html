@@ -61,7 +61,9 @@
                     </div>
                     <div>
                         <ul class="ps-1">
-                            <li v-for="(contact, index) in contacts" @click="selectContact(i)">
+                            <li v-for="(contact, index) in contacts"
+                                :class="(index == contacts.activeContact) ? 'active' : ''"
+                                @click="selectContact(index)">
                                 <img :src="contact.avatar" alt="avatar">
                                 <p>{{contact.name}}</p>
                             </li>
@@ -81,11 +83,9 @@
                         </div>
                     </div>
                     <div class="messages">
-                        <div v-for="contact in contacts" class="d-flex align-items-start flex-column">
-                            <p v-for="message in contact.messages" class="received">{{message.message}}</p>
-                        </div>
-                        <div v-for="contact in contacts" class="d-flex align-items-end flex-column">
-                            <p v-for="message in contact.messages" class="sent">{{message.message}}</p>
+                        <div class="d-flex flex-column">
+                            <p v-for="message in contacts[activeContact].messages"></p>
+                            {{message[activeContact].message}}</p>
                         </div>
                     </div>
                     <div class="type-bar d-flex justify-content-around align-items-center">
@@ -96,6 +96,7 @@
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 </body>

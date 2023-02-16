@@ -171,7 +171,13 @@ createApp({
             newText: {
                 date: '',
                 message: '',
-                status: ''
+                status: 'sent'
+            },
+
+            answerText: {
+                date: '',
+                message: 'ok',
+                status: 'received'
             }
         }
     },
@@ -187,7 +193,19 @@ createApp({
         // TEXT GENERATION
 
         addText() {
-            this.activeContact.messages.push(this.newText);
+            this.contacts[this.activeContact].messages.push({
+                date: this.newText.date,
+                message: this.newText.message,
+                status: this.newText.status
+            });
+
+            setTimeout(() => {
+                this.contacts[this.activeContact].messages.push({
+                    date: this.answerText.date,
+                    message: this.answerText.message,
+                    status: this.answerText.status
+                });
+            }, 1000)
         },
     },
 

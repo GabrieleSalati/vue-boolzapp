@@ -1,3 +1,5 @@
+/* GENERAL */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,19 +11,7 @@ body {
     height: 100vh;
 }
 
-.macro {
-    height: 90vh;
-    width: 1200px;
-}
-
-.contacts {
-    background-color: white;
-    height: 90vh;
-}
-
-.chatbox {
-    height: 90vh;
-}
+/* UTILITIES */
 
 img {
     width: 3.5rem;
@@ -42,6 +32,34 @@ p {
     padding: 0 0.5rem;
 }
 
+ul {
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+    border-top: 0.5px solid lightgray;
+}
+
+li:hover {
+    background-color: lightgrey;
+}
+
+/* MAIN CONTAINER */
+
+.macro {
+    height: 90vh;
+    width: 1200px;
+}
+
+/* LEFT COL */
+
+.contacts {
+    background-color: white;
+    height: 90vh;
+    border-right: 0.5px solid lightgray;
+}
+
 .notifications {
     background-color: aqua;
 }
@@ -59,6 +77,12 @@ p {
     display: inline-block;
 }
 
+/* RIGHT COL */
+
+.chatbox {
+    height: 90vh;
+}
+
 .current-chat {
     background-color: white;
     height: 56px;
@@ -67,24 +91,6 @@ p {
 .messages {
     height: calc(100% - 112px);
     background-image: url(../img/mine.jpg)
-}
-
-ul {
-    list-style: none;
-}
-
-li {
-    cursor: pointer;
-}
-
-.type-bar {
-    background-color: white;
-    height: 56px;
-}
-
-.text-bar {
-    width: 80%;
-    height: 2rem;
 }
 
 .received {
@@ -101,4 +107,14 @@ li {
     display: block;
     padding: 0.3rem;
     margin: 0.5rem;
+}
+
+.type-bar {
+    background-color: white;
+    height: 56px;
+}
+
+.text-bar {
+    width: 80%;
+    height: 2rem;
 }

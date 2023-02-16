@@ -35,9 +35,17 @@
 <body class="d-flex align-items-center justify-content-center">
     <div id="app">
 
+        <!-- MAIN CONTAINER -->
+
         <div class="container macro">
             <div class="row">
+
+                <!-- LEFT COL - PROFILE & CONTACTS -->
+
                 <div class="col-4 contacts px-0">
+
+                    <!-- PROFILE -->
+
                     <div class="account d-flex justify-content-between">
                         <div>
                             <img src="./img/avatar_io.jpg" alt="sofia">
@@ -49,20 +57,28 @@
                             <i class="fa-solid fa-ellipsis-vertical icon"></i>
                         </div>
                     </div>
+
+                    <!-- NOTIFICATIONS -->
+
                     <div class="notifications ps-1">
                         <div class="bell py-1"><i class="fa-solid fa-bell-slash"></i></div>
                         <p class="p-1">Ricevi notifiche di nuovi messaggi <br> Attiva notifiche desktop</p>
                     </div>
+
+                    <!-- SEARCHBAR -->
+
                     <div class="input-group mb-3 p-1">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
                         <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
                             aria-label="Example text with button addon" aria-describedby="button-addon1">
                     </div>
+
+                    <!-- CONTACT LIST -->
+
                     <div>
-                        <ul class="ps-1">
-                            <li v-for="(contact, index) in contacts"
-                                :class="(index == contacts.activeContact) ? 'active' : ''"
+                        <ul class="px-0">
+                            <li v-for="(contact, index) in contacts" :class="(index == activeContact) ? 'active' : ''"
                                 @click="selectContact(index)">
                                 <img :src="contact.avatar" alt="avatar">
                                 <p>{{contact.name}}</p>
@@ -70,11 +86,16 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- RIGHT COL - ACTIVE-CONTACT, CHAT, TEXTBAR -->
                 <div class="col-8 chatbox px-0">
                     <div class="current-chat d-flex justify-content-between">
-                        <div>
-                            <img src="./img/avatar_1.jpg" alt="Michele">
-                            <p>Michele</p>
+
+                        <!-- ACTIVE-CONTACT -->
+
+                        <div v-for="contact in contacts[activeContact]">
+                            <img :src="contact.avatar" alt="avatar">
+                            <p>{{contact.name}}</p>
                         </div>
                         <div>
                             <i class="fa-solid fa-magnifying-glass icon"></i>
@@ -82,12 +103,17 @@
                             <i class="fa-solid fa-ellipsis-vertical icon"></i>
                         </div>
                     </div>
+
+                    <!-- CHAT -->
+
                     <div class="messages">
                         <div class="d-flex flex-column">
-                            <p v-for="message in contacts[activeContact].messages"></p>
-                            {{message[activeContact].message}}</p>
+                            <p v-for="message in contacts[activeContact].messages">{{message.message}}</p>
                         </div>
                     </div>
+
+                    <!-- TEXTBAR -->
+
                     <div class="type-bar d-flex justify-content-around align-items-center">
                         <i class="fa-regular fa-face-smile icon"></i>
                         <input type="text" class="text-bar">

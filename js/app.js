@@ -171,6 +171,9 @@ createApp({
     },
 
     methods: {
+
+        // CONTACT SELECT
+
         selectContact(index) {
             this.activeContact = index;
         },

@@ -70,8 +70,9 @@
                     <div class="input-group mb-3 p-1">
                         <button class="btn btn-outline-secondary" type="button" id="button-addon1"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" class="form-control" placeholder="Cerca o inizia una nuova chat"
-                            aria-label="Example text with button addon" aria-describedby="button-addon1">
+                        <input v-model="users.name" type="text" class="form-control"
+                            placeholder="Cerca o inizia una nuova chat" aria-label="Example text with button addon"
+                            aria-describedby="button-addon1">
                     </div>
 
                     <!-- CONTACT LIST -->

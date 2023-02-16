@@ -209,6 +209,12 @@ createApp({
         },
     },
 
+    computed: {
+        users() {
+            return this.contact.filter(contacts.name)
+        }
+    }
+
 
 
 }).mount('#app')

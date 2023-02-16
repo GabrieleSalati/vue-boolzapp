@@ -167,6 +167,12 @@ createApp({
                 },
             ],
             activeContact: 0,
+
+            newText: {
+                date: '',
+                message: '',
+                status: ''
+            }
         }
     },
 
@@ -177,6 +183,14 @@ createApp({
         selectContact(index) {
             this.activeContact = index;
         },
-    }
+
+        // TEXT GENERATION
+
+        addText() {
+            this.activeContact.messages.push(this.newText);
+        },
+    },
+
+
 
 }).mount('#app')

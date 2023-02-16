@@ -24,7 +24,7 @@
 
     <!-- VUE JS -->
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.global.min.js"></script>
 
     <!-- JAVASCRIPT -->
 
@@ -94,8 +94,8 @@
                         <!-- ACTIVE-CONTACT -->
 
                         <div v-for="contact in contacts[activeContact]">
-                            <img :src="contact.avatar" alt="avatar">
-                            <p>{{contact.name}}</p>
+                            <img :src="contacts[activeContact].avatar" alt="avatar">
+                            <p>{{contacts[activeContact].name}}</p>
                         </div>
                         <div>
                             <i class="fa-solid fa-magnifying-glass icon"></i>
@@ -108,7 +108,8 @@
 
                     <div class="messages">
                         <div class="d-flex flex-column">
-                            <p v-for="message in contacts[activeContact].messages">{{message.message}}</p>
+                            <p v-for="message in contacts[activeContact].messages"
+                                :class="message.status == 'received' ? 'received' : 'sent'">{{message.message}}</p>
                         </div>
                     </div>
 
@@ -116,7 +117,7 @@
 
                     <div class="type-bar d-flex justify-content-around align-items-center">
                         <i class="fa-regular fa-face-smile icon"></i>
-                        <input type="text" class="text-bar">
+                        <input v-model="newText.messages" @keyup.enter="addText" type="text" class="text-bar">
                         <i class="fa-solid fa-microphone icon"></i>
                     </div>
                 </div>

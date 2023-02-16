@@ -96,17 +96,17 @@ li:hover {
 .received {
     background-color: grey;
     border-radius: 5px;
-    display: block;
     padding: 0.3rem;
     margin: 0.5rem;
+    justify-content: start;
 }
 
 .sent {
     background-color: green;
     border-radius: 5px;
-    display: block;
     padding: 0.3rem;
     margin: 0.5rem;
+    justify-content: end;
 }
 
 .type-bar {

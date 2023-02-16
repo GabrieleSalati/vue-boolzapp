@@ -93,7 +93,7 @@
 
                         <!-- ACTIVE-CONTACT -->
 
-                        <div v-for="contact in contacts[activeContact]">
+                        <div>
                             <img :src="contacts[activeContact].avatar" alt="avatar">
                             <p>{{contacts[activeContact].name}}</p>
                         </div>
@@ -106,10 +106,10 @@
 
                     <!-- CHAT -->
 
-                    <div class="messages">
-                        <div class="d-flex flex-column">
-                            <p v-for="message in contacts[activeContact].messages"
-                                :class="message.status == 'received' ? 'received' : 'sent'">{{message.message}}</p>
+                    <div class="messages d-flex flex-column">
+                        <div v-for="message in contacts[activeContact].messages"
+                            :class="message.status == 'received' ? 'received' : 'sent'">
+                            <p>{{message.message}}</p>
                         </div>
                     </div>
 
